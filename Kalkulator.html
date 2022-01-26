@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulatol</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="background-color: rgb(194, 194, 194);">
+    <form class="container mt-3" name="calculator">
+        <h1 style="text-align: center;">KALKULATOR</h1>
+        <div class="row mb-3" style="margin-left: 200px; margin-right: 200px;">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Angka Ke-1</b></label>
+            <div class="col-sm-10">
+                <input type="number" name="satu" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-3" style="margin-left: 200px; margin-right: 200px;">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Angka Ke-2</b></label>
+            <div class="col-sm-10">
+                <input type="number" name="dua" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-3" style="margin-left: 200px; margin-right: 200px;">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Angka Ke-3</b></label>
+            <div class="col-sm-10">
+                <input type="number" name="tiga" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-3" style="margin-left: 200px; margin-right: 200px;">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Hasil</b></label>
+            <div class="col-sm-10">
+                <input disabled type="number" name="hasil" class="form-control">
+            </div>
+        </div>
+        <center>
+            <input style="width: 100px;" class="tombol" type="button" onclick="tambah()" value="  +  ">
+            <input style="width: 100px;" class="tombol" type="button" onclick="kurang()" value="  -  ">
+            <input style="width: 100px;" class="tombol" type="button" onclick="kali()" value="  *  ">
+            <input style="width: 100px;" class="tombol" type="button" onclick="bagi()" value="  /  ">
+        </center>
+    </form>
+</body>
+
+</html>
+
+<script>
+    function tambah() {
+        var satu = parseFloat(document.calculator.satu.value);
+        var dua = parseFloat(document.calculator.dua.value);
+        var tiga = parseFloat(document.calculator.tiga.value);
+        var hasil = satu + dua + tiga;
+        document.calculator.hasil.value = hasil;
+    }
+    function kurang() {
+        var satu = parseFloat(document.calculator.satu.value);
+        var dua = parseFloat(document.calculator.dua.value);
+        var tiga = parseFloat(document.calculator.tiga.value);
+        var hasil = satu - dua - tiga;
+        document.calculator.hasil.value = hasil;
+    }
+    function kali() {
+        var satu = parseFloat(document.calculator.satu.value);
+        var dua = parseFloat(document.calculator.dua.value);
+        var tiga = parseFloat(document.calculator.tiga.value);
+        var hasil = satu * dua * tiga;
+        document.calculator.hasil.value = hasil;
+    }
+    function bagi() {
+        var satu = parseFloat(document.calculator.satu.value);
+        var dua = parseFloat(document.calculator.dua.value);
+        var tiga = parseFloat(document.calculator.tiga.value);
+        var hasil = satu / dua / tiga;
+        document.calculator.hasil.value = hasil;
+    }
+</script>
